@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+
+    <script>
+
+inicio = ['unacadena',3,9,1,10,500,1,10,true];
+
+function ordenarNumeros(arr) {
+  const resultado = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (typeof arr[j] === "number" && typeof arr[j + 1] === "number") {
+        if (arr[j] < arr[j + 1]) {
+          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        }
+      }
+    }
+  }
+  return arr.filter(val => typeof val === "number");
+}
+const resultado = ordenarNumeros(['unacadena',3,9,20,10,500,999,1,10,true]);
+console.log(resultado);
+        
+    </script>
+    
+</body>
+</html>

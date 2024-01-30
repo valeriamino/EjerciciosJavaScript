@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    numeroDeElementos=15
+
+    function generarSerieFibonnaci(limite) {
+        const serie = [0,1];
+        for(let i=2; i<limite; i++) {
+            serie[i]= serie[i-1] + serie [i-2];
+        }
+        return serie;
+    }
+    const serie = generarSerieFibonnaci(numeroDeElementos);
+
+        console.log("Serie de Fibonnaci con" + numeroDeElementos + "elementos");
+
+        console.log(serie);
+    </script>
+    
+</body>
+</html>
